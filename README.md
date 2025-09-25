@@ -48,16 +48,16 @@ solutions/
 
 ### Adding a New Solution
 
-1. Copy the template from `solutions/PROBLEM_TEMPLATE/` to create a new solution:
+1. Copy the template from `solutions/problem_template/` to create a new solution:
    ```bash
-   cp -r solutions/PROBLEM_TEMPLATE solutions/[difficulty]/[number]-[name]
+   cp -r solutions/problem_template solutions/[difficulty]/[name]_[number]
    ```
 2. Fill in the problem details in README.md
 3. Implement your solution in solution.py
 4. Add test cases in test_solution.py
 5. Run tests:
    ```bash
-   poetry run pytest solutions/[difficulty]/[number]-[name]/test_solution.py
+   poetry run pytest solutions/[difficulty]/[name]_[number]/test_solution.py
    ```
 
 ### Code Formatting
