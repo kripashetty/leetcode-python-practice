@@ -33,13 +33,31 @@ leetcode-python-practice/
 
 ## Usage
 
+### Solution Organization
+
+Each LeetCode solution is organized in its own directory under the appropriate difficulty level with the following structure:
+
+```
+solutions/
+└── [difficulty]/
+    └── [problem-number]-[problem-name]/
+        ├── README.md           # Problem description, approach, and complexity analysis
+        ├── solution.py         # Solution implementation
+        └── test_solution.py    # Test cases
+```
+
 ### Adding a New Solution
 
-1. Create a new Python file in the appropriate difficulty folder under `solutions/`
-2. Add corresponding test file in `tests/`
-3. Run tests:
+1. Copy the template from `solutions/PROBLEM_TEMPLATE/` to create a new solution:
    ```bash
-   poetry run pytest tests/
+   cp -r solutions/PROBLEM_TEMPLATE solutions/[difficulty]/[number]-[name]
+   ```
+2. Fill in the problem details in README.md
+3. Implement your solution in solution.py
+4. Add test cases in test_solution.py
+5. Run tests:
+   ```bash
+   poetry run pytest solutions/[difficulty]/[number]-[name]/test_solution.py
    ```
 
 ### Code Formatting
@@ -67,6 +85,3 @@ poetry run flake8
 - isort for import sorting
 - flake8 for linting
 
-## License
-
-This project is open source and available under the MIT License.
