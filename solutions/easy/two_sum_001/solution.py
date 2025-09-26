@@ -1,24 +1,30 @@
-"""
-LeetCode Problem [Number]: [Title]
-Difficulty: [Easy/Medium/Hard]
-Link: [LeetCode Problem URL]
+"""Two Sum solution implementation.
 
-Time Complexity: O(?)
-Space Complexity: O(?)
+LeetCode Problem 1: Two Sum
+Difficulty: Easy
+Link: https://leetcode.com/problems/two-sum/
+
+Time Complexity: O(n²)
+Space Complexity: O(1)
 """
+
 from typing import List  # Add other type hints as needed
 
 
 class Solution:
+    """Solution class for the Two Sum problem."""
+
     def twoSum(self, input: List[int], target: int) -> List[int]:
-        """
+        """Find two numbers in the array that add up to the target.
+
         Args:
-            input: List[int]
-            target: int
-        
+            input: List of integers to search through
+            target: The target sum to find
+
         Returns:
-            Description of return value
-        
+            A list containing the indices of the two numbers that sum to target.
+            Returns empty list if no solution exists.
+
         Examples:
             >>> Solution().twoSum([2,7,11,15], 9)
             [0, 1]
@@ -33,6 +39,3 @@ class Solution:
                 if input[i] + input[j] == target:
                     return [i, j]
         return []
-
-
-
